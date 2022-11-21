@@ -1,5 +1,6 @@
+package Utilits;
+
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ArithmeticProgression implements Serializable {
@@ -104,7 +105,12 @@ public class ArithmeticProgression implements Serializable {
     }
 
     public String toString(){
-        return String.format("%d, %d, %d:\n%s\n%s\n%s\n%s",
+        this.message1 = (this.message1 == null ? "Результат еще не посчитан" : this.message1);
+        this.message2 = (this.message2 == null ? "Результат еще не посчитан" : this.message2);
+        this.message3 = (this.message3 == null ? "Результат еще не посчитан" : this.message3);
+        this.message4 = (this.message4 == null ? "Результат еще не посчитан" : this.message4);
+
+        return String.format("%d, %d, %d:\n%s\n%s\n%s\n%s\n",
                             this.start, this.step, this.num,
                             this.message1, this.message2, this.message3, this.message4);
     }
